@@ -1,0 +1,14 @@
+<%- include('partials/head', { pageTitle: '32Gamers Club - Members' }) %>
+<%- include('partials/nav') %>
+
+<main>
+  <h1>Club Members</h1>
+  
+  <ul>
+    <% members.forEach(member => { %>
+      <li><a href="/members/<%= member.id %>"><%= member.name %></a></li>
+    <% }) %>
+  </ul>
+</main>
+
+<%- include('partials/footer') %>
